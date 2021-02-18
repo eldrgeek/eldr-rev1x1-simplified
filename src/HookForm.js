@@ -38,6 +38,7 @@ export default function HookForm() {
 					</FormErrorMessage>
 				</FormControl>
 				<Button
+					fontFamily="stencil-std"
 					mt={4}
 					border="2px"
 					bg="black"
