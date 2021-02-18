@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import React from 'react';
 import {
 	FormErrorMessage,
+	Box,
 	// FormLabel,
 	FormControl,
 	// Input,
@@ -29,7 +30,7 @@ export default function HookForm() {
 	}
 
 	return (
-		<div>
+		<Box bg="black" w="100%" align="center">
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<FormControl isInvalid={errors.name}>
 					<FormErrorMessage>
@@ -38,17 +39,19 @@ export default function HookForm() {
 				</FormControl>
 				<Button
 					mt={4}
-					colorScheme="teal"
+					border="2px"
+					bg="black"
+					color="white"
 					isLoading={formState.isSubmitting}
 					type="submit"
 				>
-					Send me my f****** button
+					Send me my mother f****** button
 				</Button>
 			</form>
 			<iframe
 				title="get my button"
 				src="https://docs.google.com/forms/d/e/1FAIpQLSfn2KPijE8ynj7AbU9KIw1qwvBwNv7WfuiDRsxuWr_Znv7ZEQ/viewform?embedded=true"
-				width="640"
+				width="90%"
 				height="953"
 				frameborder="0"
 				marginheight="0"
@@ -56,6 +59,6 @@ export default function HookForm() {
 			>
 				Loading…
 			</iframe>
-		</div>
+		</Box>
 	);
 }
