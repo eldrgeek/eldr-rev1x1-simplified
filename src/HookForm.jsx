@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import React from 'react';
+import TextBlock from './TextBlock';
 import {
 	FormErrorMessage,
 	Box,
@@ -30,7 +31,7 @@ export default function HookForm() {
 	}
 
 	return (
-		<Box bg="black" w="100%" align="center">
+		<Box bg="black" h="100%" w="100%" align="center">
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<FormControl isInvalid={errors.name}>
 					<FormErrorMessage>
@@ -49,11 +50,25 @@ export default function HookForm() {
 					Send me my mother f****** button
 				</Button>
 			</form>
+			<TextBlock
+				heading="block1"
+				body="This is stuff that 
+			goes here and so on
+			and so on and so on and here is more here than you can know"
+			/>
+			<TextBlock
+				heading="block2"
+				body="And there si more and more
+	and more and and here is more here than you can know
+	and more and and here is more here than you can know
+"
+			/>
+
 			<iframe
 				title="get my button"
 				src="https://docs.google.com/forms/d/e/1FAIpQLSfn2KPijE8ynj7AbU9KIw1qwvBwNv7WfuiDRsxuWr_Znv7ZEQ/viewform?embedded=true"
 				width="90%"
-				height="953"
+				height="1200px"
 				frameBorder="0"
 				marginHeight="0"
 				marginWidth="0"
