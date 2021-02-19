@@ -13,7 +13,7 @@ export default function TextBlck({ heading, body }) {
 			<Text fontFamily="stencil-std" mt={4} fontSize="2xl">
 				{heading}
 			</Text>
-			<Text mx={10} align="left" fontSize="xl">
+			<Text maxWidth="700px" mx={10} align="left" fontSize="xl">
 				{body}
 			</Text>
 		</Box>

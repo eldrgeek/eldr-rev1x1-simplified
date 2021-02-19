@@ -1,69 +1,53 @@
-import { useForm } from 'react-hook-form';
 import React from 'react';
 import TextBlock from './TextBlock';
-import {
-	FormErrorMessage,
-	Box,
-	// FormLabel,
-	FormControl,
-	// Input,
-	Button
-} from '@chakra-ui/react';
+
+import { Box } from '@chakra-ui/react';
+import RequestButton from './RequestButton';
 
 export default function HookForm() {
-	const { handleSubmit, errors, formState } = useForm();
-
-	// function validateName(value) {
-	//   if (!value) {
-	//     return "Name is required";
-	//   } else if (value !== "Naruto") {
-	//     return "Jeez! You're not a fan 😱";
-	//   } else return true;
-	// }
-
-	function onSubmit(values) {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				alert(JSON.stringify(values, null, 2));
-				resolve();
-			}, 3000);
-		});
-	}
-
 	return (
 		<Box bg="black" h="100%" w="100%" align="center">
-			<form onSubmit={handleSubmit(onSubmit)}>
-				<FormControl isInvalid={errors.name}>
-					<FormErrorMessage>
-						{errors.name && errors.name.message}
-					</FormErrorMessage>
-				</FormControl>
-				<Button
-					fontFamily="stencil-std"
-					mt={4}
-					border="2px"
-					bg="black"
-					color="white"
-					isLoading={formState.isSubmitting}
-					type="submit"
-				>
-					Send me my mother f****** button
-				</Button>
-			</form>
 			<TextBlock
-				heading="block1"
-				body="This is stuff that 
-			goes here and so on
+				heading="About the Revolution"
+				body="Written in 2007, six years after the unprecedented loss of life and
+				horrific destruction of the Twin Towers in NYC, it may seem naive
+				to have assumed that global peace and understanding could flow
+				from something as commonplace as a friendly greeting to a stranger."
+			/>
+			<TextBlock
+				body="
+				I believe that the chain of events in our lives that binds us one-to-
+				another is a sacred mystery. And that making the world a better
+				place for all peoples calls for an investment of personal kindness.
+				As the song suggests, “We&#39;re a raggle-taggle army, with no uniform
+				or guns. But we&#39;ve been called by co-incidence so maybe we&#39;re the
+				ones...to take this Revolution to the street. &#39;Smile at every solitary
+				person that we meet. &#39;Wave at total strangers, no matter where
+				they&#39;re from. We&#39;re gonna start a Revolution. We&#39;re gonna win it
+				One by One!”
 			and so on and so on and here is more here than you can know"
 			/>
-			<TextBlock
-				heading="block2"
-				body="And there si more and more
-	and more and and here is more here than you can know
-	and more and and here is more here than you can know
-"
-			/>
+			<RequestButton />
 
+			<TextBlock
+				heading="Blah blah blah"
+				body="Get your button. Get your button. Yada yada
+				Get your button. Yada yada
+				Get your button. Yada yada
+				Get your button. Yada yada
+			and so on and so on and here is more here than you can know"
+			/>
+			<RequestButton />
+
+			<TextBlock
+				heading="Yet more text"
+				body="Get your button. Get your button. Yada yada
+				Get your button. Yada yada
+				Get your button. Yada yada
+				Get your button. Yada yada
+			and so on and so on and here is more here than you can know"
+			/>
+			<RequestButton />
 			<iframe
 				title="get my button"
 				src="https://docs.google.com/forms/d/e/1FAIpQLSfn2KPijE8ynj7AbU9KIw1qwvBwNv7WfuiDRsxuWr_Znv7ZEQ/viewform?embedded=true"
