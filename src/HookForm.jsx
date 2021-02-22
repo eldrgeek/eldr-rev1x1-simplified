@@ -33,8 +33,8 @@ export default function HookForm() {
 			/>
 			<TextBlock
 				body="
-				I believe that the chain of events in our lives that binds us one-to-
-				another is a sacred mystery. And that making the world a better
+				We believe that the chain of events in our lives that binds us one-to-
+				another is a sacred mystery. And, that making the world a better
 				place for all peoples calls for an investment of personal kindness.
 				As the song suggests, “We&#39;re a raggle-taggle army, with no uniform
 				or guns. But we&#39;ve been called by co-incidence so maybe we&#39;re the
