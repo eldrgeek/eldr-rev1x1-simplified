@@ -7,7 +7,7 @@ import {
 	// FormLabel,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
-export default function HookForm() {
+export default function HookForm({ scrollTo }) {
 	const { handleSubmit, errors, formState } = useForm();
 
 	// function validateName(value) {
@@ -19,12 +19,13 @@ export default function HookForm() {
 	// }
 
 	function onSubmit(values) {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				alert('You got a button');
-				resolve();
-			}, 3000);
-		});
+		scrollTo();
+		// return new Promise((resolve) => {
+		// 	setTimeout(() => {
+		// 		alert('You got a button');
+		// 		resolve();
+		// 	}, 3000);
+		// });
 	}
 
 	return (
