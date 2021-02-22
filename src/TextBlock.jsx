@@ -10,10 +10,16 @@ import {
 export default function TextBlck({ heading, body }) {
 	return (
 		<Box color="white">
-			<Text fontFamily="stencil-std" mt={4} fontSize="2xl">
+			<Text fontFamily="stencil-std" mt={4} fontSize="4xl">
 				{heading}
 			</Text>
-			<Text maxWidth="700px" mx={10} align="left" fontSize="xl">
+			<Text
+				fontFamily="Allerta Stencil"
+				maxWidth="700px"
+				mx={10}
+				align="left"
+				fontSize="xl"
+			>
 				{body}
 			</Text>
 		</Box>
