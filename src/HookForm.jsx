@@ -88,10 +88,7 @@ export default function HookForm() {
 							}
 						}}
 					>
-						<Link
-							className="justcauses"
-							href="https://www.noelpaulstookey.com/"
-						>
+						<Link className="justcauses" href="https://www.justcauses.info/">
 							JUST CAUSES
 						</Link>
 					</Box>,
@@ -130,7 +127,8 @@ export default function HookForm() {
 				body="
 				We've made a batch of buttons 
 				and we'll send them out while supplies 
-				last. They're cheaper to make than to send. So if you'd to produce more buttons, clich <here>
+				last. 
+				They're cheaper to make than to send. So if you'd to produce more buttons, clich <here>
 				to find out how to make your own, or click <here>
 				to chip in to help fund the making and mailing from 
 				this site.
