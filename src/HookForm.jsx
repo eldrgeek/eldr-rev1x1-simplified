@@ -23,6 +23,16 @@ export default function HookForm() {
 			<Text color="white" fontFamily="stencil-std" pt={12} fontSize="6xl">
 				Revolution 1x1
 			</Text>
+			<TextBlock
+				heading="Our anthem"
+				body="
+        Click the player below to play or pause our anthem
+        "
+			/>
+			<Player url="https://vimeo.com/514507334" />
+
+			<RequestButton scrollTo={scrollTo} />
+
 			<Verse />
 			<RequestButton scrollTo={scrollTo} />
 
@@ -35,9 +45,20 @@ export default function HookForm() {
 			/>
 			<TextBlock
 				body="
-				We believe that the chain of events in our lives that binds us one-to-
-				another is a sacred mystery. And, that making the world a better
+				We believe that the chain of events in our lives that binds us one-to-another 
+				is a sacred mystery. 
+			"
+			/>
+			<TextBlock
+				body="
+				We believe that making the world a better
 				place for all peoples calls for an investment of personal kindness.
+				
+			"
+			/>
+
+			<TextBlock
+				body="
 				As the song suggests, “We&#39;re a raggle-taggle army, with no uniform
 				or guns. But we&#39;ve been called by coincidence so maybe we&#39;re the
 				ones...to take this Revolution to the street. &#39;Smile at every solitary
@@ -46,15 +67,6 @@ export default function HookForm() {
 				One by One!”
 			"
 			/>
-			<TextBlock
-				heading="Our anthem"
-				body="
-        Click the player below to play or pause our anthem
-        "
-			/>
-			<Player url="https://vimeo.com/514507334" />
-
-			<RequestButton scrollTo={scrollTo} />
 
 			<TextBlock
 				heading="About the buttons"

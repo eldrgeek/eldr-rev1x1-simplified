@@ -1,7 +1,7 @@
 {
-  "name": "rev1x1-button",
+  "name": "revolution-1x1-production",
   "version": "1.0.0",
-  "description": "This example shows how to build a simple form with Chakra UI's form components\nand the React Hook Form form library.",
+  "description": "",
   "keywords": [],
   "main": "src/index.jsx",
   "dependencies": {

@@ -49,9 +49,10 @@ Gonna start a revolution... gonna win it one by one.`.split('\n');
 					<Text
 						fontFamily="Allerta Stencil"
 						maxWidth="700px"
-						mx={10}
+						mx={8}
+						mb={2}
 						align="left"
-						fontSize="xl"
+						fontSize="lg"
 					>
 						{(lineNo > 13 ? lineNo - 14 : lineNo) + 1 + ': ' + line}
 					</Text>,
