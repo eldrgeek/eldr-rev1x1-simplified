@@ -23,12 +23,7 @@ export default function HookForm() {
 			<Text color="white" fontFamily="stencil-std" pt={12} fontSize="6xl">
 				Revolution 1x1
 			</Text>
-			<TextBlock
-				heading="Our anthem"
-				body="
-        Click the player below to play or pause our anthem
-        "
-			/>
+			<TextBlock heading="Our anthem" />
 			<Player url="https://vimeo.com/514507334" />
 
 			<RequestButton scrollTo={scrollTo} />
@@ -128,10 +123,7 @@ export default function HookForm() {
 				We've made a batch of buttons 
 				and we'll send them out while supplies 
 				last. 
-				They're cheaper to make than to send. So if you'd to produce more buttons, clich <here>
-				to find out how to make your own, or click <here>
-				to chip in to help fund the making and mailing from 
-				this site.
+			
 			"
 			/>
 			<RequestButton scrollTo={scrollTo} />

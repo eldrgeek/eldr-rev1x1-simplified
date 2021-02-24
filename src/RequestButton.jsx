@@ -45,7 +45,7 @@ export default function HookForm({ scrollTo }) {
 					isLoading={formState.isSubmitting}
 					type="submit"
 				>
-					Please send me a (free!) button
+					Please send me a button
 				</Button>
 			</form>
 		</Box>
