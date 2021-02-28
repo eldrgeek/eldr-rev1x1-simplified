@@ -7,7 +7,7 @@ import {
 	// FormLabel,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
-export default function HookForm({ scrollTo }) {
+export default function HookForm({ submitted, scrollTo }) {
 	const { handleSubmit, errors, formState } = useForm();
 
 	// function validateName(value) {
@@ -28,7 +28,7 @@ export default function HookForm({ scrollTo }) {
 		// });
 	}
 
-	return (
+	return submitted ? null : (
 		<Box bg="black" h="100%" w="100%" align="center">
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<FormControl isInvalid={errors.name}>

@@ -7,7 +7,7 @@ import {
 	// Button
 } from '@chakra-ui/react';
 
-export default function TextBlck({ heading, body }) {
+export default function TextBlock({ heading, body }) {
 	return (
 		<Box color="white">
 			<Text fontFamily="stencil-std" mt={4} fontSize="4xl">
@@ -20,7 +20,9 @@ export default function TextBlck({ heading, body }) {
 				align="left"
 				fontSize="xl"
 			>
-				{body}
+				{Array.isArray(body)
+					? body.map((seg, index) => <span key={index}>{seg}</span>)
+					: body}
 			</Text>
 		</Box>
 	);

@@ -5,6 +5,8 @@ import { Box, Text, Link } from '@chakra-ui/react';
 import RequestButton from './RequestButton';
 import { Element, scroller } from 'react-scroll';
 import Verse from './Verse';
+import ButtonForm from './ButtonForm';
+
 const scrollTo = () => {
 	scroller.scrollTo('myScrollToElement', {
 		duration: 1500,
@@ -18,18 +20,20 @@ const scrollTo = () => {
 };
 
 export default function HookForm() {
+	const [submitted, setSubmitted] = React.useState(false);
 	return (
 		<Box m={0} bg="black" h="100%" w="100%" align="center">
 			<Text color="white" fontFamily="stencil-std" pt={12} fontSize="6xl">
 				Revolution 1x1
 			</Text>
+
 			<TextBlock heading="Our anthem" />
 			<Player url="https://vimeo.com/514507334" />
 
-			<RequestButton scrollTo={scrollTo} />
+			<RequestButton submitted={submitted} scrollTo={scrollTo} />
 
 			<Verse />
-			<RequestButton scrollTo={scrollTo} />
+			<RequestButton submitted={submitted} scrollTo={scrollTo} />
 
 			<TextBlock
 				heading="About the Revolution"
@@ -114,30 +118,21 @@ export default function HookForm() {
 				<LIST GOES HERE>  
       "
 			/> */}
-			<RequestButton scrollTo={scrollTo} />
+			<RequestButton submitted={submitted} scrollTo={scrollTo} />
 
 			<Element name="myScrollToElement"></Element>
-			<TextBlock
-				heading="While supplies last"
-				body="
+			{!submitted ? (
+				<TextBlock
+					heading="While supplies last"
+					body="
 				We've made a batch of buttons 
 				and we'll send them out while supplies 
 				last. 
 			
 			"
-			/>
-			<RequestButton scrollTo={scrollTo} />
-			<iframe
-				title="get my button"
-				src="https://docs.google.com/forms/d/e/1FAIpQLSfn2KPijE8ynj7AbU9KIw1qwvBwNv7WfuiDRsxuWr_Znv7ZEQ/viewform?embedded=true"
-				width="90%"
-				height="1200px"
-				frameBorder="0"
-				marginHeight="0"
-				marginWidth="0"
-			>
-				Loading…
-			</iframe>
+				/>
+			) : null}
+			<ButtonForm submitted={submitted} setSubmitted={setSubmitted} />
 		</Box>
 	);
 }

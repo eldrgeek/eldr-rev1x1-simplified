@@ -7,7 +7,7 @@ import {
 	// Button
 } from '@chakra-ui/react';
 
-export default function TextBlck({ heading, body }) {
+export default function VerseBlock({ heading, body }) {
 	const verse = `I'm gonna start a revolution; I'm gonna take it to the street,
 I'm gonna smile at every solitary person that I meet!
 I'm gonna wave at total strangers no matter where they're from.
@@ -45,30 +45,25 @@ Gonna start a revolution... gonna win it one by one.`.split('\n');
 			</Text>
 			<br />
 			{verse.map((line, lineNo) => {
-				return [
-					<Text
-						fontFamily="Allerta Stencil"
-						maxWidth="700px"
-						mx={8}
-						mb={2}
-						align="left"
-						fontSize="lg"
-					>
-						{(lineNo > 13 ? lineNo - 14 : lineNo) + 1 + ': ' + line}
-					</Text>,
-					lineNo === 13 ? (
-						[
+				return (
+					<div key={lineNo}>
+						<Text
+							fontFamily="Allerta Stencil"
+							maxWidth="700px"
+							mx={8}
+							mb={2}
+							align="left"
+							fontSize="lg"
+						>
+							{(lineNo > 13 ? lineNo - 14 : lineNo) + 1 + ': ' + line}
+						</Text>
+						{lineNo === 13 ? (
 							<Text fontFamily="stencil-std" mt={4} fontSize="2xl">
 								Chapter 2
-							</Text>,
-							<br />
-						]
-					) : [4, 8, 10, 14, 18, 20].includes(lineNo + 1) ? (
-						<br />
-					) : (
-						''
-					)
-				];
+							</Text>
+						) : null}
+					</div>
+				);
 			})}
 
 			<Text fontFamily="stencil-std" mt={4} fontSize="l">
