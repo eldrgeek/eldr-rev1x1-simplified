@@ -133,6 +133,17 @@ export default function HookForm() {
 				/>
 			) : null}
 			<ButtonForm submitted={submitted} setSubmitted={setSubmitted} />
+			<Text
+				fontFamily="Allerta Stencil"
+				maxWidth="700px"
+				color="white"
+				mx={10}
+				mt={10}
+				align="center"
+				fontSize="sm"
+			>
+				Version 22/2/2 11:00{' '}
+			</Text>
 		</Box>
 	);
 }
