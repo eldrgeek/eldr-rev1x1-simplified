@@ -75,7 +75,7 @@ const App = ({ submitted, setSubmitted }) => {
 					</Flex>
 
 					<Flex width="300px">
-						<InputBox placeholder="Line 1" name="line1" label="Address" />
+						<InputBox placeholder="Line 1" name="line1" label="Mailing Address" />
 						<Spacer />
 					</Flex>
 
