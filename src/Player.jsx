@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react';
 const Player = ({ url }) => {
 	return (
 		<Box border="2px" maxWidth="700px" bg="black" color="white">
-			<ReactPlayer width="100%" url={url} playing />
+			<ReactPlayer width="100%" url={url} playing controls={true} />
 		</Box>
 	);
 };

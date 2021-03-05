@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HookForm from './HookForm';
+import Main from './Main';
 import { ChakraProvider, CSSReset, Box } from '@chakra-ui/react';
 import './firebase';
 function App() {
@@ -8,7 +8,7 @@ function App() {
 		<ChakraProvider>
 			<CSSReset />
 			<Box p={0}>
-				<HookForm />
+				<Main />
 			</Box>
 		</ChakraProvider>
 	);

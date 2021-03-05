@@ -1,39 +1,34 @@
 {
-  "name": "revolution-1x1-production",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.jsx",
-  "dependencies": {
-    "@chakra-ui/react": "1.0.2",
-    "@emotion/react": "11.1.2",
-    "@emotion/styled": "11.0.0",
-    "@firebase/database": "0.9.4",
-    "emotion-theming": "10.0.19",
-    "firebase": "8.2.9",
-    "formik": "2.2.6",
-    "framer-motion": "2.9.5",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-hook-form": "6.12.2",
-    "react-player": "2.9.0",
-    "react-scripts": "3.0.1",
-    "react-scroll": "1.8.1",
-    "typescript": "4.2.2"
-  },
-  "devDependencies": {
-    "typescript": "3.3.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "revolution-1x1-production",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"main": "src/index.jsx",
+	"dependencies": {
+		"@chakra-ui/react": "1.0.2",
+		"@emotion/react": "11.1.2",
+		"@emotion/styled": "11.0.0",
+		"@firebase/database": "0.9.4",
+		"emotion-theming": "10.0.19",
+		"firebase": "8.2.9",
+		"formik": "2.2.6",
+		"framer-motion": "2.9.5",
+		"react": "17.0.1",
+		"react-dom": "17.0.1",
+		"react-hook-form": "6.12.2",
+		"react-player": "2.9.0",
+		"react-scripts": "3.0.1",
+		"react-scroll": "1.8.1",
+		"typescript": "4.2.2"
+	},
+	"devDependencies": {
+		"typescript": "3.3.3"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	},
+	"browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }

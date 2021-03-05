@@ -19,16 +19,17 @@ const scrollTo = () => {
 	// scroll.scrollToBottom()
 };
 
-export default function HookForm() {
+export default function Front({ bg = 'white', color = 'black' }) {
 	const [submitted, setSubmitted] = React.useState(false);
+	console.log('COLOR', color);
 	return (
-		<Box m={0} bg="black" h="100%" w="100%" align="center">
+		<Box m={0} bg={bg} h="100%" w="100%" align="center">
 			<Text color="white" fontFamily="stencil-std" pt={12} fontSize="6xl">
 				Revolution 1x1
 			</Text>
 
 			<TextBlock heading="Our anthem" />
-			<Player url="https://vimeo.com/514507334" />
+			<Player url="https://vimeo.com/509843143/e9f5e901f7" />
 
 			<RequestButton submitted={submitted} scrollTo={scrollTo} />
 
@@ -136,13 +137,14 @@ export default function HookForm() {
 			<Text
 				fontFamily="Allerta Stencil"
 				maxWidth="700px"
+				bg="black"
 				color="white"
 				mx={10}
 				mt={10}
 				align="center"
 				fontSize="sm"
 			>
-				Version 22/2/2 11:22{' '}
+				Version 22/3/4 04:15{' '}
 			</Text>
 		</Box>
 	);
