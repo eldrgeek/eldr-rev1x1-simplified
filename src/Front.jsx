@@ -29,7 +29,7 @@ export default function Front({ bg = 'white', color = 'black' }) {
 			</Text>
 
 			<TextBlock heading="Our anthem" />
-			<Player url="https://vimeo.com/509843143/e9f5e901f7" />
+			<Player url="https://vimeo.com/520729319/9ce6ed93af" />
 
 			<RequestButton submitted={submitted} scrollTo={scrollTo} />
 
@@ -144,7 +144,7 @@ export default function Front({ bg = 'white', color = 'black' }) {
 				align="center"
 				fontSize="sm"
 			>
-				Version 22/3/4 04:15{' '}
+				Version 22/3/10 11:30{' '}
 			</Text>
 		</Box>
 	);
