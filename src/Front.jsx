@@ -88,7 +88,7 @@ export default function Front({ bg = 'white', color = 'black' }) {
 							}
 						}}
 					>
-						<Link className="justcauses" href="https://www.justcauses.info/">
+						<Link className="justcauses" href="https://justcauses.hearnow.com/">
 							JUST CAUSES
 						</Link>
 					</Box>,
@@ -144,7 +144,7 @@ export default function Front({ bg = 'white', color = 'black' }) {
 				align="center"
 				fontSize="sm"
 			>
-				Version 22/3/10 12:15{' '}
+				Version 22/3/10 12:35{' '}
 			</Text>
 		</Box>
 	);
