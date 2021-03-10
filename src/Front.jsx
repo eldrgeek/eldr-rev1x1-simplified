@@ -144,7 +144,7 @@ export default function Front({ bg = 'white', color = 'black' }) {
 				align="center"
 				fontSize="sm"
 			>
-				Version 22/3/10 11:30{' '}
+				Version 22/3/10 12:15{' '}
 			</Text>
 		</Box>
 	);
