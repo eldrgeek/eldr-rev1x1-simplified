@@ -6,22 +6,24 @@ import RequestButton from './RequestButton';
 import { Element, scroller } from 'react-scroll';
 import Verse from './Verse';
 import ButtonForm from './ButtonForm';
-
-const scrollTo = () => {
-	scroller.scrollTo('myScrollToElement', {
-		duration: 1500,
-		delay: 100,
-		smooth: true,
-		//   containerId: 'ContainerElementID',
-		offset: 0 // Scrolls to element + 50 pixels down the page
-		//   ...
-	});
-	// scroll.scrollToBottom()
-};
+import AltButton from './AltButton';
 
 export default function Front({ bg = 'white', color = 'black' }) {
 	const [submitted, setSubmitted] = React.useState(false);
+	// const [returnLabel, setReturnLabel] = React.useState('');
 	console.log('COLOR', color);
+	const scrollTo = (place, offset = 0) => {
+		scroller.scrollTo(place, {
+			duration: 1500,
+			delay: 100,
+			smooth: true,
+			//   containerId: 'ContainerElementID',
+			offset // Scrolls to element + 50 pixels down the page
+			//   ...
+		});
+		// scroll.scrollToBottom()
+	};
+
 	return (
 		<Box m={0} bg={bg} h="100%" w="100%" align="center">
 			<Text color="white" fontFamily="stencil-std" pt={12} fontSize="6xl">
@@ -30,11 +32,16 @@ export default function Front({ bg = 'white', color = 'black' }) {
 
 			<TextBlock heading="Our anthem" />
 			<Player url="https://vimeo.com/520729319/9ce6ed93af" />
+			<Element name="top"></Element>
 
-			<RequestButton submitted={submitted} scrollTo={scrollTo} />
+			<RequestButton label="top1" submitted={submitted} scrollTo={scrollTo} />
 
 			<Verse />
-			<RequestButton submitted={submitted} scrollTo={scrollTo} />
+			<RequestButton
+				label="verseend"
+				submitted={submitted}
+				scrollTo={scrollTo}
+			/>
 
 			<TextBlock
 				heading="About the Revolution"
@@ -119,9 +126,9 @@ export default function Front({ bg = 'white', color = 'black' }) {
 				<LIST GOES HERE>  
       "
 			/> */}
-			<RequestButton submitted={submitted} scrollTo={scrollTo} />
+			<RequestButton label="bottom" submitted={submitted} scrollTo={scrollTo} />
 
-			<Element name="myScrollToElement"></Element>
+			<Element name="form"></Element>
 			{!submitted ? (
 				<TextBlock
 					heading="While supplies last"
@@ -133,7 +140,14 @@ export default function Front({ bg = 'white', color = 'black' }) {
 			"
 				/>
 			) : null}
+			<AltButton
+				text="Show me what's on the CD"
+				target="cd"
+				submitted={submitted}
+				scrollTo={scrollTo}
+			/>
 			<ButtonForm submitted={submitted} setSubmitted={setSubmitted} />
+
 			<Text
 				fontFamily="Allerta Stencil"
 				maxWidth="700px"
@@ -144,7 +158,15 @@ export default function Front({ bg = 'white', color = 'black' }) {
 				align="center"
 				fontSize="sm"
 			>
-				Version 22/3/10 12:35{' '}
+				<Element name="cd"></Element>
+				<iframe
+					id="inlineFrameExample"
+					title="Inline Frame Example"
+					width="100%"
+					height="1000px"
+					src="https://justcauses.hearnow.com/"
+				/>
+				Version 22/3/11 03:34{' '}
 			</Text>
 		</Box>
 	);

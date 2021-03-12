@@ -10,6 +10,7 @@ interface Values {
 	city: string;
 	state: string;
 	zip: string;
+	date: string;
 }
 
 const InputBox = ({ width = '400px', name, placeholder, label }) => {
@@ -24,7 +25,7 @@ const InputBox = ({ width = '400px', name, placeholder, label }) => {
 					paddingLeft: '6px',
 					background: 'black',
 					// @ts-ignore
-					width: parseInt(width) - 10 + 'px'
+					width: parseInt(width, 10) - 10 + 'px'
 					// width: { width }
 				}}
 				id={name}
@@ -54,13 +55,15 @@ const App = ({ submitted, setSubmitted }) => {
 					line2: '',
 					city: '',
 					state: '',
-					zip: ''
+					zip: '',
+					date: ''
 				}}
 				// @ts-ignore
 				onSubmit={(
 					values: Values,
 					{ setSubmitting }: FormikHelpers<Values>
 				) => {
+					values.date = new Date().toString();
 					writeData(values);
 					setSubmitted(true);
 				}}

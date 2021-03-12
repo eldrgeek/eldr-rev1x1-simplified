@@ -6,15 +6,8 @@ import {
 	Button
 	// FormLabel,
 } from '@chakra-ui/react';
-import { Element } from 'react-scroll';
-
 import { useForm } from 'react-hook-form';
-export default function HookForm({
-	submitted,
-	scrollTo,
-	label,
-	target = 'form'
-}) {
+export default function HookForm({ scrollTo, text = 'Tell Me' }) {
 	const { handleSubmit, errors, formState } = useForm();
 
 	// function validateName(value) {
@@ -26,19 +19,17 @@ export default function HookForm({
 	// }
 
 	function onSubmit(values) {
-		scrollTo(target);
+		scrollTo('cd', 200);
 		// return new Promise((resolve) => {
 		// 	setTimeout(() => {
-		// 		alert('Ysou got a button');
+		// 		alert('You got a button');
 		// 		resolve();
 		// 	}, 3000);
 		// });
 	}
 
-	return submitted ? null : (
+	return (
 		<Box bg="black" h="100%" w="100%" align="center">
-			<Element name={label}></Element>
-
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<FormControl isInvalid={errors.name}>
 					<FormErrorMessage>
@@ -54,7 +45,7 @@ export default function HookForm({
 					isLoading={formState.isSubmitting}
 					type="submit"
 				>
-					Please send me a (free) button
+					{text}
 				</Button>
 			</form>
 		</Box>
