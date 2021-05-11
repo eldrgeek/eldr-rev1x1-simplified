@@ -45,14 +45,20 @@ try {
 const database = firebase.database();
 const storage = firebase.storage();
 const storageRef = storage.ref();
-
+let inviter: string = "";
 const createInvite = () => {
   const name: string = uniqueNamesGenerator(customConfig); // big-donkey
   const inviteRef = firebase.database().ref("invites/" + name);
   inviteRef.set({ from: nameKey, to: [] });
   //@ts-ignore
   values.inviteLink = name;
+  //@ts-ignore
+  values.inviter = inviter;
   console.log("invited ", name);
+};
+const setInvite = (name: string) => {
+  inviter = name;
+  console.log("Set inviter as", name);
 };
 const sendEmail = () => {
   console.log("created email with", values);
@@ -80,8 +86,8 @@ async function shortenURL(URL: string) {
     console.log("Short URL is ", result.link);
     //@ts-ignore
     values.selfieURL = result.link;
-    pushRef.update(values);
     createInvite();
+    pushRef.update(values);
     sendEmail();
   } catch (e) {
     throw e;
@@ -153,4 +159,11 @@ const getButtons = () => {
 // writeData({ id: 2,
 // 	 name: 'name',
 // 	  email: 'mikewolf@mike-wolf.com' });
-export { createInvite, getButtons, writeData, writeImage, sendEmail };
+export {
+  setInvite,
+  createInvite,
+  getButtons,
+  writeData,
+  writeImage,
+  sendEmail
+};

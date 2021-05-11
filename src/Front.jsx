@@ -185,7 +185,7 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
           height="1000px"
           src="https://justcauses.hearnow.com/"
         />
-        Version 22/3/11 21:34{" "}
+        Version 21/5/11 11:10{" "}
       </Text>
     </Box>
   );
