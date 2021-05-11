@@ -30,8 +30,7 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
         Revolution 1x1
       </Text>
 
-      <TextBlock heading="Change a" />
-      <TextBlock heading="million hearts" />
+      <TextBlock heading="Change a million hearts" />
 
       <Player url="https://vimeo.com/520729319/9ce6ed93af" />
       <Element name="top"></Element>
