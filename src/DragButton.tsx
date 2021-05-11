@@ -1,0 +1,62 @@
+import * as React from "react";
+import { Image, Box } from "@chakra-ui/react";
+import { Rnd } from "react-rnd";
+// type Merge<P, T> = Omit<P, keyof T> & T;
+// type MotionBoxProps = Merge<HTMLChakraProps<'div'>, HTMLMotionProps<'div'>>;
+const style = {
+  zIndex: 10,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  background: "#f0f0f0",
+  borderRadius: "100%"
+};
+//{any,{x:number, y:number}
+//@ts-ignore
+function RevButton({ setPosition, position }) {
+  return (
+    <Rnd
+      style={style}
+      default={{
+        x: 0,
+        y: 0,
+        width: 100,
+        height: 100
+      }}
+      position={position}
+      onDragStop={(e, d) => {
+        setPosition({ x: d.x, y: d.y });
+      }}
+    >
+      <Image
+        draggable="false"
+        pointerEvents="none"
+        // alignObject="center"
+        width="auto"
+        minWidth="100%"
+        // height="auto"
+        // minHeight="100%"
+        borderRadius="full"
+        border="1px solid black"
+        objectFit="contain"
+        crossOrigin="anonymous"
+        // src="./button.png"
+        // src="https://i.imgur.com/PCjRzZV.jpg"
+        src="https://i.imgur.com/2CKl6wk.jpg?2"
+        //https://i.imgur.com/2CKl6wk.jpg?1
+        // src="https://firebasestorage.googleapis.com/v0/b/revolution-1x1.appspot.com/o/assets%2FButton.png?alt=media&token=0a26907d-ec8f-4a0c-8476-836d92ef219b"
+      />
+      <Box
+        position="fixed"
+        right={0}
+        bottom={0}
+        h={5}
+        w={5}
+        bg="black"
+        // borderRadius="100%"
+        zIndex={10}
+      ></Box>
+    </Rnd>
+  );
+}
+export default RevButton;
