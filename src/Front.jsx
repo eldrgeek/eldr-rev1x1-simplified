@@ -2,7 +2,7 @@ import React from "react";
 import TextBlock from "./TextBlock";
 import Player from "./Player";
 import { Button, Box, Text, Link } from "@chakra-ui/react";
-import RequestButton from "./RequestButton";
+// import RequestButton from "./RequestButton";
 import { Element, scroller } from "react-scroll";
 import Verse from "./Verse";
 // import ButtonForm from "./ButtonForm";
@@ -30,19 +30,20 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
         Revolution 1x1
       </Text>
 
-      <TextBlock heading="Change a million hearts" />
+      <TextBlock heading="Change the world" />
+      <TextBlock heading="With Love" />
 
       <Player url="https://vimeo.com/520729319/9ce6ed93af" />
       <Element name="top"></Element>
 
-      <RequestButton label="top1" submitted={submitted} scrollTo={scrollTo} />
+      {/* <RequestButton label="top1" submitted={submitted} scrollTo={scrollTo} /> */}
 
       <Verse />
-      <RequestButton
+      {/* <RequestButton
         label="verseend"
         submitted={submitted}
         scrollTo={scrollTo}
-      />
+      /> */}
 
       <TextBlock
         heading="About the Revolution"
@@ -76,13 +77,13 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
 			"
       />
 
-      <TextBlock
+      {/* <TextBlock
         heading="About the buttons"
         body="How can you show you've joined the revolution? 
         Smiling doesn't work with a mask on. But you can wear a
         button. 
       "
-      />
+      /> */}
       <TextBlock
         heading="Just Causes"
         body={[
@@ -122,10 +123,10 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
 				<LIST GOES HERE>  
       "
 			/> */}
-      <RequestButton label="bottom" submitted={submitted} scrollTo={scrollTo} />
+      {/* <RequestButton label="bottom" submitted={submitted} scrollTo={scrollTo} /> */}
 
       <Element name="form"></Element>
-      {!submitted
+      {/* {!submitted
         ? [
             <TextBlock
               key="1"
@@ -165,7 +166,7 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
               Give me a virtual button
             </Button>
           ]
-        : null}
+        : null} */}
       <Element name="cd"></Element>
       <Text
         fontFamily="Allerta Stencil"
@@ -177,14 +178,7 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
         align="center"
         fontSize="sm"
       >
-        <iframe
-          id="inlineFrameExample"
-          title="Inline Frame Example"
-          width="100%"
-          height="1000px"
-          src="https://justcauses.hearnow.com/"
-        />
-        Version 21/5/11 11:10{" "}
+        Version July 26 2022{" "}
       </Text>
     </Box>
   );
