@@ -97,7 +97,10 @@ export default function Front({ setPage, bg = "white", color = "black" }) {
               }
             }}
           >
-            <Link className="justcauses" href="https://justcauses.hearnow.com/">
+            <Link
+              className="justcauses"
+              href="https://www.amazon.com/music/player/albums/B08ZH8YL18"
+            >
               JUST CAUSES
             </Link>
           </Box>,
